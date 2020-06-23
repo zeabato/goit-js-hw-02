@@ -1,16 +1,11 @@
 'use strict';
 
 const formatString = function (string) {
-  let stringTemp = '';
-  for (let index = 0; index < string.length && index < 40; index++) {
-    stringTemp += string[index];
-  }
   if (string.length >= 40){
-    return stringTemp + '...';
+    return string.slice(0, 40) + '...';
   } else{
-    return stringTemp;
+    return string;
   }
-  
 };
 
 /*
@@ -31,3 +26,16 @@ console.log(
   ),
 );
 // повернеться форматований рядок
+
+
+// _____________v1________________
+// let stringTemp = '';
+//   for (let index = 0; index < string.length && index < 40; index++) {
+//     stringTemp += string[index];
+//   }
+//   if (string.length >= 40){
+//     return stringTemp + '...';
+//   } else{
+//     return stringTemp;
+//   }
+  
